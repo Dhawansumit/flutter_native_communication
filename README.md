@@ -66,4 +66,4 @@ This POC bridges the gap between native and Flutter worlds, proving that you can
 
 # Project Demo
 
-[Watch the demo video](video/demo_video.mp4)
+[Watch the demo video](video/video.mov)
