@@ -63,3 +63,7 @@ Your user’s data is now in Flutter-land, ready to be displayed on this screen.
 
 ## 💡 Final Thoughts
 This POC bridges the gap between native and Flutter worlds, proving that you can have the best of both without compromise. Whether you're working on a large-scale app or a quick MVP, this approach ensures you can leverage the strengths of native code where it counts, without losing the flexibility and speed of Flutter. 🌟
+
+# Project Demo
+
+[Watch the demo video](video/demo_video.mp4)
