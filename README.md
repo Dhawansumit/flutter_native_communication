@@ -33,7 +33,7 @@ Xcode (for iOS dev)
 
 **HomeScreen.dart**: The Flutter home screen that displays the magic—your user data.
 
-## 🔮 The Android Magic 🧙‍♂️
+## 🔮 The Android Implementation 🧙‍♂️
 **1. MainActivity.java:**
 Think of this as the Android gatekeeper. It listens for method calls from Flutter and knows exactly when to open the gate to LoginActivity.
 
@@ -44,7 +44,7 @@ This is where the login happens. On success, it whispers the user data back to F
 Don’t forget to tell Android about LoginActivity—it needs a proper introduction!
 
 
-##  🧙‍♀️ The iOS Sorcery 🧙‍♀️
+##  🧙‍♀️ The iOS Implementation 🧙‍♀️
 **1. AppDelegate.swift:**
 The iOS counterpart of the Android gatekeeper. Sets up the method channel and responds to Flutter’s call to action.
 
