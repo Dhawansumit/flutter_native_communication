@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'home_screen.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -9,11 +11,13 @@ class MyApp extends StatefulWidget {
   static const platform = MethodChannel('com.example.poc_native_communication/login');
   final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
+  MyApp({super.key});
+
   @override
-  _MyAppState createState() => _MyAppState();
+  MyAppState createState() => MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
@@ -35,10 +39,8 @@ class _MyAppState extends State<MyApp> {
   }
 
   void _handleLoginSuccess(String userData) {
-    print("HELLO1");
     if (userData.isNotEmpty) {
       try {
-        print("HELLO2");
         widget.navigatorKey.currentState?.pushReplacement(
           MaterialPageRoute(
             builder: (context) => HomeScreen(userData: userData),
@@ -51,7 +53,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future<void> _navigateToLogin() async {
-    await Future.delayed(Duration(seconds: 2)); // Splash screen duration
+    await Future.delayed(const Duration(seconds: 2)); // Splash screen duration
     try {
       print("Navigating to Native Login");
       await MyApp.platform.invokeMethod('showLogin');
@@ -68,7 +70,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
+      home: const Scaffold(
         body: Center(
           child: CircularProgressIndicator(), // Splash Screen UI
         ),
@@ -77,20 +79,4 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
-class HomeScreen extends StatelessWidget {
-  final String userData;
 
-  HomeScreen({required this.userData});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Home Screen'),
-      ),
-      body: Center(
-        child: Text('User Data: $userData'),
-      ),
-    );
-  }
-}
