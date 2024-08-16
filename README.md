@@ -15,36 +15,49 @@ This project is your gateway to combining the best of both worlds—leveraging t
 ## 🛠️ Getting Started
 **Prerequisites**
 Flutter SDK
+
 Android Studio (for Android dev)
+
 Xcode (for iOS dev)
 
 ## 🧩 Project Breakdown
 **MainActivity.java**: Your gateway from Flutter to native Android—this file sets up the method channel for communication.
+
 **LoginActivity.java**: The Android login screen and logic reside here.
+
 **AppDelegate.swift**: iOS's starting point for setting up the method channel.
+
 **LoginViewController.swift**: The iOS login screen and its logic.
+
 **main.dart**: The Flutter entry point—sets up the splash screen and manages navigation.
+
 **HomeScreen.dart**: The Flutter home screen that displays the magic—your user data.
 
 ## 🔮 The Android Magic 🧙‍♂️
 **1. MainActivity.java:**
 Think of this as the Android gatekeeper. It listens for method calls from Flutter and knows exactly when to open the gate to LoginActivity.
+
 **2. LoginActivity.java:**
 This is where the login happens. On success, it whispers the user data back to Flutter using a method channel.
+
 **3. AndroidManifest.xml:**
 Don’t forget to tell Android about LoginActivity—it needs a proper introduction!
+
 
 ##  🧙‍♀️ The iOS Sorcery 🧙‍♀️
 **1. AppDelegate.swift:**
 The iOS counterpart of the Android gatekeeper. Sets up the method channel and responds to Flutter’s call to action.
+
 **2. LoginViewController.swift:**
 Handles the login magic on iOS. Successfully logs in and sends the user data back to Flutter.
+
 **3. Main.storyboard:**
 Where the native iOS login UI comes to life.
 
 ## ✨ Flutter Integration ✨
 **1. main.dart:**
 After a splash of color with the splash screen, it beckons the native login screen. Upon success, it navigates you to the home screen, passing along user data.
+
 **2. HomeScreen.dart:**
 Your user’s data is now in Flutter-land, ready to be displayed on this screen.
 
